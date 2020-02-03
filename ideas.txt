@@ -1,0 +1,35 @@
+
+Idées :
+
+Steps pour lancer le script :
+
+Git clone le répertoire
+-> git clone http://github.com/Libereau/autopwn
+
+Installer les prérequis
+-> création d'un fichier requirements.txt
+  -> python3
+  -> colorama
+  -> ...
+
+Donner les droits au script
+-> chmod +x ./autopwn.py
+
+Le lancer
+-> ./autopwn.py <ip>
+
+Détails du script :
+
+1) Lancement KO du script
+-> Affichage de l'aide en -h ou --help
+
+2) Actions effectuées pendant le déroulement du script
+-> Scan nmap avec en sortie :
+  - liste des ports ouverts
+  - liste des services et versions installées sur le site
+
+-> Dirbuster / wfuzz
+  - Seulement si port 80 ou 443 d'ouverts, fuzzing/dirb pour connaitre les répertoires présents sur le site web
+
+-> SQLmap
+  - Seulement si dans l'url il y a ? et un =
