@@ -43,7 +43,6 @@ def command():
                 ip = sys.argv[2]
                 print("\n[+] Let's pwn !\n")
                 mainPwn(ip)
-                #dirbScan(ip)
 
         elif sys.argv[1] == "-h" or sys.argv[1] == "--help":
             os.system('clear')
@@ -54,7 +53,6 @@ def command():
             os.system('clear')
             print("\n[!] Let's pwn !\n")
             mainPwn(ip)
-            #dirbScan(ip)
 
         else:
             print("\n[!] Wrong input..")
@@ -123,7 +121,6 @@ def dirbScan(ip):
                     site_request = requests.get(site_to_test)
 
                     if (str(site_request.status_code) in list_allowed_code) == True :
-                        #print(Fore.GREEN+'[!] '+site_to_test)
                         list_founded_dirs.append(site_to_test)
                         num_founded_dirs += 1
 
@@ -142,7 +139,5 @@ def dirbScan(ip):
         print(Fore.GREEN+'    [!] '+dirs)
 
     print(Style.RESET_ALL)
-
-
 
 command()
