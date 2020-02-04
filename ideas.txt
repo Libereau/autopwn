@@ -20,15 +20,15 @@ Le lancer
 
 Détails du script :
 
-1) Lancement KO du script
+1) Lancement KO du script    -- OK
 -> Affichage de l'aide en -h ou --help
 
-2) Actions effectuées pendant le déroulement du script
+2) Actions effectuées pendant le déroulement du script   -- OK
 -> Scan nmap avec en sortie :
   - liste des ports ouverts
   - liste des services et versions installées sur le site
 
--> Dirbuster / wfuzz
+-> Dirbuster / wfuzz  -- OK
   - Seulement si port 80 ou 443 d'ouverts, fuzzing/dirb pour connaitre les répertoires présents sur le site web
 
 -> SQLmap
