@@ -15,6 +15,6 @@ Une fois ceci fait, donner les droits d'exécution au programme et laissez le fa
 
 `chmod +x autopwn.py`
 
-`./autopwn.py`
+`./autopwn.py <ip_address>`
 
 Have fun !
