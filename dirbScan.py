@@ -2,6 +2,7 @@ import subprocess
 import requests
 from progressbar import ProgressBar, Bar, Percentage
 from colorama import Fore, Back, Style
+from parsingFilesDirs import parsingFiles
 
 def dirbscan(ip):
     print("[+] Starting dirb ...\n")
@@ -49,3 +50,5 @@ def dirbscan(ip):
         print(Fore.GREEN+'    [!] '+dirs)
 
     print(Style.RESET_ALL)
+
+    parsingFiles(list_founded_dirs)
