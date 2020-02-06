@@ -20,7 +20,7 @@ def nmapScan(ip):
 
         for proto in nmScan[host].all_protocols():
             print("\n    ---------------------\n")
-            print('    Protocol : %s' % proto)
+            print('    Protocol : %s' % proto+'\n')
 
             lport = nmScan[host][proto].keys()
             for port in lport:
@@ -29,7 +29,7 @@ def nmapScan(ip):
                 state = nmScan[host][proto][port]['state']
                 if state != 'closed':
                     print(Fore.GREEN+'    [!] port : %s - state : %s' % (port, nmScan[host][proto][port]['state']))
-                    print('        %s - %s' % (nmScan[host][proto][port]['name'], nmScan[host][proto][port]['version']))
+                    print('        %s - %s' % (nmScan[host][proto][port]['name'], nmScan[host][proto][port]['version'])+'\n')
 
     print(Style.RESET_ALL)
     if dirb == True:

@@ -43,7 +43,7 @@ def dirbscan(ip):
             print(Fore.GREEN+'    [!] '+dirs)
 
         print("\n"+Style.RESET_ALL)
-        exit(1)
+        parsingFiles(list_founded_dirs)
 
     print("\n    Directory / files found \n")
     for dirs in list_founded_dirs:

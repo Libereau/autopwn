@@ -21,6 +21,7 @@ new
 cgi-bin
 faq
 rss
+server-status
 home
 img
 default
