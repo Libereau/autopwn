@@ -30,7 +30,7 @@ def parsingFiles(list_founded_dirs):
 
             print("        Parameters used : %s" % data)
 
-def parsingUrl(list_founded_dirs):
+#def parsingUrl(list_founded_dirs):
 
 
 

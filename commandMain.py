@@ -32,7 +32,9 @@ def command():
 
             elif re.match(regex,sys.argv[2]):
                 ip = sys.argv[2]
-                print("\n[+] Let's pwn !\n")
+                os.system('clear')
+                print("\n---------------- AutoPwn ----------------")
+                print("\n[!] Let's pwn !\n")
                 nmapScan(ip)
 
         elif sys.argv[1] == "-h" or sys.argv[1] == "--help":
