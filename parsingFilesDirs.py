@@ -2,9 +2,15 @@ import requests
 import re
 from bs4 import BeautifulSoup
 from colorama import Fore, Back, Style
+from sqlScan import sqlscan
 
 
 def parsingFiles(list_founded_dirs):
+
+    listDirs = []
+    listParam = []
+    listfirstParam = []
+
     blacklist = ["form_id","form_build_id","search_block_form","audience","technical"]
 
     print("[+] Parsing files and dirs..")
@@ -23,14 +29,21 @@ def parsingFiles(list_founded_dirs):
             print(Fore.RED+"\n    [!] Forms on '%s' : " % file+Style.RESET_ALL)
             data = re.findall('name="(.*?)"',parameters)
 
-            data = set(data)
+            listDirs.append(file)
+
+
             for element in blacklist :
                 if element in data:
                     data.remove(element)
 
-            print("        Parameters used : %s" % data)
+            print("        Parameters used : "+str(data))
+            listParam.append(data)
 
-#def parsingUrl(list_founded_dirs):
+    sqlscan(listDirs, listParam)
+
+
+
+#parsingUrl(list_founded_dirs)
 
 
 

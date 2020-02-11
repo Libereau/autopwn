@@ -7,8 +7,8 @@ def dirbscan(ip):
     list_founded_dirs = []
     chemin = str(subprocess.run(['pwd',"/dev/null"], capture_output=True)).split("stdout=b'")[1].split("\\n', stderr=b'")[0]
 
-    #cmd = "python3 /root/Konan/konan.py -u http://"+ip+" -x 403 > "+chemin+"/sortie.txt"
-    #os.system(cmd)
+    cmd = "python3 /root/Konan/konan.py -u http://"+ip+" -x 403 > "+chemin+"/sortie.txt"
+    os.system(cmd)
 
     regexUrl = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
 
@@ -21,7 +21,6 @@ def dirbscan(ip):
             if url != [] :
                 if len(url) != 1 :
                     list_founded_dirs.append(url[1])
-
                 else:
                     list_founded_dirs.append(url[0])
 
@@ -32,3 +31,5 @@ def dirbscan(ip):
 
     print(Style.RESET_ALL+"\n")
     parsingFiles(list_founded_dirs)
+
+#dirbscan('127.0.0.1')
