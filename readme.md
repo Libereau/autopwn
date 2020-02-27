@@ -9,6 +9,8 @@ Pour cela, le programme va lancer divers outils comme :
 - recherche de LFI pouvant mener à une RCE
 - reverse shell
 
+# Usage
+
 Pour lancer le programme il vous faudra tout d'abord installer les outils présents dans le requirement.txt.
 
 Une fois ceci fait, donner les droits d'exécution au programme et laissez le faire !
@@ -16,5 +18,8 @@ Une fois ceci fait, donner les droits d'exécution au programme et laissez le fa
 `chmod +x autopwn.py`
 
 `./autopwn.py <ip_address>`
+
+- Exemple : 
+`./autopwn 127.0.0.1`
 
 Have fun !
